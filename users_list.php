@@ -27,7 +27,7 @@ foreach($users AS $user){
 $invites = $db->get('invites');
 foreach($invites AS $invite){
     echo "ID " . $invite['id'] . " Статус ";
-    echo $invite['statis'] ? ' Свободен ' : " Зарегистрирован ";
+    echo $invite['status'] ? ' Свободен ' : " Зарегистрирован ";
     echo isset($invite['date_status']) ? date('d-m-Y', $invite['date_status']) : '' ;
     echo "<br>";
 }
